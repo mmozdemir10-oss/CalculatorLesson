@@ -7,7 +7,31 @@ st.title("🧮 Calculateur de leçons - By Florence")
 # =========================
 annee = st.number_input("📅 Année", min_value=2000, max_value=3000, value=2026)
 
-st.write("Entrez le nombre de leçons pour chaque catégorie.")
+st.write("Entrez la durée de leçon")
+
+# =========================
+# DURÉE DES ACTIVITÉS
+# =========================
+
+st.header("⏱️ Durée des activités (en minutes)")
+
+durees = [30, 45, 60, 75, 90, 105, 120]
+
+duree_p = st.selectbox("Muscu", durees, index=2, key="duree_p")
+duree_o = st.selectbox("Grande salle", durees, index=2, key="duree_o")
+duree_m = st.selectbox("Petite salle", durees, index=2, key="duree_m")
+
+duree_x = st.selectbox("Forum", durees, index=2, key="duree_x")
+duree_y = st.selectbox("Comète", durees, index=2, key="duree_y")
+duree_z = st.selectbox("CES", durees, index=2, key="duree_z")
+duree_a = st.selectbox("Rue du Ballon", durees, index=2, key="duree_a")
+duree_b = st.selectbox("Stade", durees, index=2, key="duree_b")
+duree_c = st.selectbox("Piscine", durees, index=2, key="duree_c")
+duree_d = st.selectbox("SAE", durees, index=2, key="duree_d")
+duree_e = st.selectbox("Multi Cosec", durees, index=2, key="duree_e")
+
+st.divider() 
+
 
 # =========================
 # SEMESTRE 1
@@ -86,28 +110,72 @@ tot_c = s1_c + s2_c
 tot_d = s1_d + s2_d
 tot_e = s1_e + s2_e
 
+# =========================
+# CALCUL DES HEURES
+# =========================
+
+
+
+minutes_s1 = (
+    s1_p * duree_p +
+    s1_o * duree_o +
+    s1_m * duree_m +
+    s1_x * duree_x +
+    s1_y * duree_y +
+    s1_z * duree_z +
+    s1_a * duree_a +
+    s1_b * duree_b +
+    s1_c * duree_c +
+    s1_d * duree_d +
+    s1_e * duree_e
+)
+
+minutes_s2 = (
+    s2_p * duree_p +
+    s2_o * duree_o +
+    s2_m * duree_m +
+    s2_x * duree_x +
+    s2_y * duree_y +
+    s2_z * duree_z +
+    s2_a * duree_a +
+    s2_b * duree_b +
+    s2_c * duree_c +
+    s2_d * duree_d +
+    s2_e * duree_e
+)
+
+heures_s1 = round(minutes_s1 / 60, 2)
+heures_s2 = round(minutes_s2 / 60, 2)
+heures_annee = round((minutes_s1 + minutes_s2) / 60, 2)
+
 
 # =========================
 # AFFICHAGE
 # =========================
 if st.button("📊 Calculer"):
 
-    st.subheader(f"🗒️ Leçons année {annee}")
+    st.subheader(f"🗒️ Résultats année {annee}")
 
     st.write(f"### 📘 Semestre 1 ({annee})")
     st.write(f"Intra : {s1_intra}")
     st.write(f"Extra : {s1_extra}")
     st.write(f"Stage : -{s1_stage}")
-    st.success(f"Total leçons semestre 1 de {annee} : {s1_total}")
+    st.success(f"Total semestre 1 de {annee} : {s1_total}")
 
     st.write(f"### 📙 Semestre 2 ({annee})")
     st.write(f"Intra : {s2_intra}")
     st.write(f"Extra : {s2_extra}")
     st.write(f"Stage : -{s2_stage}")
-    st.success(f"Total leçons semestre 2 de {annee} : {s2_total}")
+    st.success(f"Total semestre 2 de {annee} : {s2_total}")
 
     st.divider()
 
-    st.success(f"🎓 Total leçons année (civile) {annee} : {annee_total}")
+    st.success(f"🎓 Total année (civile) {annee} : {annee_total}")
 
     st.divider()
+
+    st.write("### ⏱️ Temps total d'enseignement")
+
+    st.write(f"📘 Heures Semestre 1 : {heures_s1} h")
+    st.write(f"📙 Heures Semestre 2 : {heures_s2} h")
+    st.success(f"🎓 Heures Totales Année : {heures_annee} h")
