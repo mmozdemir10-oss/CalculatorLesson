@@ -181,6 +181,6 @@ if st.button("📊 Calculer"):
 
     st.write("### ⏱️ Temps total d'enseignement")
 
-    st.write(f"📘 Heures Semestre 1 : {heures_s1} h")
-    st.write(f"📙 Heures Semestre 2 : {heures_s2} h")
-    st.success(f"🎓 Heures Totales Année : {heures_annee} h")
+    st.write(f"📘 Heures Semestre 1 de {annee} : {heures_s1} h")
+    st.write(f"📙 Heures Semestre 2 de {annee} : {heures_s2} h")
+    st.success(f"🎓 Heures Totales Année (civile) {annee} : {heures_annee} h")
