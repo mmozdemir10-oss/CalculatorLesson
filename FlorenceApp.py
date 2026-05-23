@@ -7,13 +7,14 @@ st.title("🧮 Calculateur de leçons - By Florence")
 # =========================
 annee = st.number_input("📅 Année", min_value=2000, max_value=3000, value=2026)
 
-st.write("Entrez la durée de leçon")
 
 # =========================
 # DURÉE DES ACTIVITÉS
 # =========================
 
 st.header("⏱️ Durée des activités (en minutes)")
+
+st.write("Entrez la durée de leçon")
 
 durees = [30, 45, 60, 75, 90, 105, 120]
 
@@ -38,6 +39,8 @@ st.divider()
 # =========================
 st.header(f"📘 Semestre 1 ({annee})")
 
+st.write("Entrez le nombre de leçons pour chaque catégorie")
+
 st.subheader("Intra")
 s1_p = st.number_input("Muscu", min_value=0, value=0, key="s1_p")
 s1_o = st.number_input("Grande salle", min_value=0, value=0, key="s1_o")
@@ -61,6 +64,8 @@ s1_stage = st.number_input("Nombre de leçons stage (semestre 1)", min_value=0, 
 # SEMESTRE 2
 # =========================
 st.header(f"📙 Semestre 2 ({annee})")
+
+st.write("Entrez le nombre de leçons pour chaque catégorie")
 
 st.subheader("Intra")
 s2_p = st.number_input("Muscu", min_value=0, value=0, key="s2_p")
