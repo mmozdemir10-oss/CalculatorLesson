@@ -191,35 +191,35 @@ if st.button("📊 Calculer"):
     st.subheader(f"🗒️ Résultats année {annee}")
 
     with st.expander(f"📘 Semestre 1 ({annee})", expanded=False):
-     with st.expander(f"Intra : {s1_intra} leçons ({heures_intra}h)", expanded=False):
-        st.write(f"Muscu : {s1_p} leçons ({heures_muscu}h)")
-        st.write(f"Grande salle : {s1_o} leçons ({heures_grandesalle}h)")
-        st.write(f"Petite salle : {s1_m} leçons ({heures_petitesalle}h)")
-     with st.expander(f"Extra : {s1_extra} leçons ({heures_extra}h)", expanded=False):
-        st.write(f"Forum : {s1_x} leçons ({heures_forum}h)")
-        st.write(f"Comète : {s1_y} leçons ({heures_comete}h)")
-        st.write(f"CES : {s1_z} leçons ({heures_ces}h)")
-        st.write(f"Rue du Ballon : {s1_a} leçons ({heures_rueballon}h)")
-        st.write(f"Stade : {s1_b} leçons ({heures_stade}h)")
-        st.write(f"Piscine : {s1_c} leçons ({heures_piscine}h")
-        st.write(f"SAE : {s1_d} leçons ({s1_d}h)")
-        st.write(f"Multi Cosec : {s1_e} leçons ({heures_multicosec}h)")
-        st.write(f"Stage : -{s1_stage} leçons ({heures_stade}h)")
+        with st.expander(f"Intra : {s1_intra} leçons ({heures_intra}h)", expanded=False):
+            st.write(f"Muscu : {s1_p} leçons ({heures_muscu}h)")
+            st.write(f"Grande salle : {s1_o} leçons ({heures_grandesalle}h)")
+            st.write(f"Petite salle : {s1_m} leçons ({heures_petitesalle}h)")
+        with st.expander(f"Extra : {s1_extra} leçons ({heures_extra}h)", expanded=False):
+            st.write(f"Forum : {s1_x} leçons ({heures_forum}h)")
+            st.write(f"Comète : {s1_y} leçons ({heures_comete}h)")
+            st.write(f"CES : {s1_z} leçons ({heures_ces}h)")
+            st.write(f"Rue du Ballon : {s1_a} leçons ({heures_rueballon}h)")
+            st.write(f"Stade : {s1_b} leçons ({heures_stade}h)")
+            st.write(f"Piscine : {s1_c} leçons ({heures_piscine}h")
+            st.write(f"SAE : {s1_d} leçons ({s1_d}h)")
+            st.write(f"Multi Cosec : {s1_e} leçons ({heures_multicosec}h)")
+        st.write(f"Stage : -{s1_stage} leçons ({heures_stage}h)")
 
     with st.expander(f"📙 Semestre 2 ({annee})", expanded=False):
-     with st.expander(f"Intra : {s2_intra} leçons ({heures_intra1}h)", expanded=False):
-        st.write(f"Muscu : {s2_p} leçons ({heures_muscu1}h)")
-        st.write(f"Grande salle : {s2_o} leçons ({heures_grandesalle1}h)")
-        st.write(f"Petite salle : {s2_m} leçons ({heures_petitesalle1}h)")
-     with st.expander(f"Extra : {s2_extra} leçons ({heures_extra1}h)", expanded=False):
-        st.write(f"Forum : {s2_x} leçons ({heures_forum1}h)")
-        st.write(f"Comète : {s2_y} leçons ({heures_comete1}h)")
-        st.write(f"CES : {s2_z} leçons ({heures_ces1}h)")
-        st.write(f"Rue du Ballon : {s2_a} leçons ({heures_rueballon1}h)")
-        st.write(f"Stade : {s2_b} leçons ({heures_stade1}h)")
-        st.write(f"Piscine : {s2_c} leçons ({heures_piscine1}h)")
-        st.write(f"SAE : {s2_d} leçons ({heures_sae1}h)")
-        st.write(f"Multi Cosec : {s2_e} leçons ({heures_multicosec1}h)")
+        with st.expander(f"Intra : {s2_intra} leçons ({heures_intra1}h)", expanded=False):
+            st.write(f"Muscu : {s2_p} leçons ({heures_muscu1}h)")
+            st.write(f"Grande salle : {s2_o} leçons ({heures_grandesalle1}h)")
+            st.write(f"Petite salle : {s2_m} leçons ({heures_petitesalle1}h)")
+        with st.expander(f"Extra : {s2_extra} leçons ({heures_extra1}h)", expanded=False):
+            st.write(f"Forum : {s2_x} leçons ({heures_forum1}h)")
+            st.write(f"Comète : {s2_y} leçons ({heures_comete1}h)")
+            st.write(f"CES : {s2_z} leçons ({heures_ces1}h)")
+            st.write(f"Rue du Ballon : {s2_a} leçons ({heures_rueballon1}h)")
+            st.write(f"Stade : {s2_b} leçons ({heures_stade1}h)")
+            st.write(f"Piscine : {s2_c} leçons ({heures_piscine1}h)")
+            st.write(f"SAE : {s2_d} leçons ({heures_sae1}h)")
+            st.write(f"Multi Cosec : {s2_e} leçons ({heures_multicosec1}h)")
         st.write(f"Stage : -{s2_stage} leçons ({heures_stage1}h)")
 
     st.subheader(f"📆 Bilan année {annee}")
